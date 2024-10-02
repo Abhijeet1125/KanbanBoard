@@ -1,21 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import './Dropdown.css';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { put_groupBy, put_sortBy } from '../store/dataSlice';
 
 const Dropdown = () => {
 
   const distpatch = useDispatch()
-
-  const [group, setGroup] = useState("status");
-  const [sort, setSort] = useState("priority");
-
-  useEffect(() => {
-    distpatch(put_groupBy(group));
-    distpatch(put_sortBy(sort ));
-  }, [group, sort])
-
-
 
   return (
     <div className="dropdown">
@@ -38,7 +28,7 @@ const Dropdown = () => {
       <div className="dropdown-content">
         <div className="dropdown-section">
           <label htmlFor="grouping">Grouping</label>
-          <select id="grouping" onChange={(e) => setGroup(e.target.value)}>
+          <select id="grouping" onChange={(e) => distpatch( put_groupBy ((e.target.value)))}>
             <option value="status">Status</option>
             <option value="user">User</option>
             <option value="priority">Priority</option>
@@ -46,7 +36,7 @@ const Dropdown = () => {
         </div>
         <div className="dropdown-section">
           <label htmlFor="ordering">Ordering</label>
-          <select id="ordering" onChange={(e) => setSort(e.target.value)} >
+          <select id="ordering" onChange={(e) => distpatch( put_sortBy ((e.target.value)))} >
             <option value="priority">Priority</option>
             <option value="title">Title</option>
           </select>

@@ -23,8 +23,10 @@ function App() {
         dispatch(put_data(data))
         const group = localStorage.getItem("group")
         const sort = localStorage.getItem ("sort")
-        if ( group ) dispatch ( put_groupBy (group))
-        if ( sort ) dispatch ( put_sortBy(sort))
+        if ( group ) {dispatch ( put_groupBy (group))}
+        else { dispatch (  put_groupBy ("status"))}
+        if ( sort ) {dispatch ( put_sortBy(sort))}
+        else { dispatch ( put_sortBy ( "priority"))}
         setLoading(false)
       } catch (error) {
         console.log(error)
@@ -54,7 +56,7 @@ function App() {
 
   return (
     <>
-      <Dropdown />
+      { (!loading) && <Dropdown/> }
       <div className="card-container-wrapper">
         {to_display.map((item, index) => (
           <CardContainer key={index} data={item.data} headerData={item.headerData} />

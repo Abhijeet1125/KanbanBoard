@@ -15,10 +15,12 @@ const dataSlice = createSlice({
     put_data: (state, action) => {
       state.data = action.payload;
     },
-    put_groupBy: (state, action) => {       
+    put_groupBy: (state, action) => { 
+      localStorage.setItem ("group" , action.payload)      
       state.groupBy = action.payload;
     },
-    put_sortBy: (state, action) => {      
+    put_sortBy: (state, action) => {  
+      localStorage.setItem ("sort" , action.payload )    
       state.sortBy = action.payload;
     },
     put_todisplay: (state , action ) => { 

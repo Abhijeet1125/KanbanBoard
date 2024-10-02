@@ -1,8 +1,7 @@
 import React from 'react';
 import './Card.css';
 
-const Card = ({ data }) => {
-  console.log ( "data in card " , data )
+const Card = ({ data }) => {  
   const { id, title, tag, user } = data;
 
   // Extract the initials from the user's name
