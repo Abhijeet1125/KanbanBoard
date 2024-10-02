@@ -49,7 +49,7 @@ function App() {
   return (
     <>
       { (!loading) && <Dropdown/> }
-      <div className="card-container-wrapper">
+      <div className="card-container-wrapper ">
         {to_display.map((item, index) => (
           <CardContainer key={index} data={item.data} headerData={item.headerData} />
         ))}
