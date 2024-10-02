@@ -4,7 +4,7 @@ import './Card.css';
 const Card = ({ data }) => {  
   const { id, title, tag, user } = data;
 
-  // Extract the initials from the user's name
+ 
   const initials = user.name
     .split(' ')
     .map((word) => word[0].toUpperCase())
@@ -12,20 +12,20 @@ const Card = ({ data }) => {
 
   return (
     <div className="card">
-      {/* ID */}
+
       <div className="card-id">{id}</div>
 
-      {/* Title */}
+
       <div className="card-title">{title}</div>
 
-      {/* Some SVG Icon */}
+   
       <div className="card-svg ">
         <svg width="16" height="16" fill="currentColor">
           <circle cx="8" cy="8" r="8" fill="gray" />
         </svg>
       </div>
 
-      {/* Tags */}
+
       <div className="card-tags">
         {tag.length > 0 ? (
           tag.map((item, index) => (
@@ -49,7 +49,7 @@ const Card = ({ data }) => {
         )}
       </div>
 
-      {/* User Information */}
+  
       <div className="card-user">
         <div className="card-user-initials">{initials}</div>
         <svg

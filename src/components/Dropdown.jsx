@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Dropdown.css';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { put_groupBy, put_sortBy } from '../store/dataSlice';
 
 const Dropdown = () => {

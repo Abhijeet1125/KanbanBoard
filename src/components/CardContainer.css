@@ -1,22 +1,20 @@
-/* Main container for each CardContainer */
 .container {
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     background-color: #f9f9f9;
     padding: 2px;
     margin: 1px;
-    width: 40%; /* Allow Flexbox to control the width */
+    width: 40%; 
     box-sizing: border-box;
   }
   
-  /* Flex container for the cards */
+  
   .cards {
     display: flex;
     flex-direction: column;
     gap: 2px;
   }
-  
-  /* Flexbox layout for multiple CardContainers */
+
   .card-container-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -24,13 +22,11 @@
     gap: 5px;
   }
   
-  /* Each CardContainer will take 48% of the width on larger screens */
   .container {
     flex: 1 1 18%;
     max-width: 18%;
   }
-  
-  /* On smaller screens, make the cards stack vertically */
+ 
   @media (max-width: 768px) {
     .container {
       flex: 1 1 100%;

@@ -35,14 +35,6 @@ function App() {
     callfun()
   }, [])
 
-  // useEffect (()=>{
-  //   console.log ( "selector se laya maal" , data.tickets  )
-  // } , [data])
-
-  // useEffect (()=>{
-  //   console.log ( "group ka maal " , groupby   )
-  // } , [groupby, sortby , dispatch])
-
 
   useEffect(() => {
     if (!loading) {

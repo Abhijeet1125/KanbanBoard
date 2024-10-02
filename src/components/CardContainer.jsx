@@ -4,15 +4,22 @@ import './CardContainer.css';
 import { useSelector } from 'react-redux';
 
 const CardContainer = ({ data, headerData }) => {
-    const groupby = useSelector((state)=>state.data.groupBy);
+  const groupby = useSelector((state) => state.data.groupBy);
+  
+  const priorityMap = {
+    4: 'Urgent',
+    3: 'High',
+    2: 'Medium',
+    1: 'Low',
+    0: 'No priority',
+  };
+
   return (
     <div className="container">
-      {/* Header Section */}
       <div className="header">
-        <h1>{headerData[groupby]}</h1>
+        <h3>{priorityMap[headerData[groupby]] || headerData[groupby]} {data.length}</h3>
       </div>
 
-      {/* Cards Section */}
       <div className="cards">
         {data.map((item, index) => (
           <Card key={index} data={item} />

@@ -3,7 +3,7 @@
     border-radius: 10px;
     padding: 10px;
     margin: 10px;
-    width: 90%; /* Card width is now 20% of the screen */
+    width: 90%; 
     position: relative;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #fff;
@@ -15,42 +15,42 @@
 .card-id {
     font-weight: bold;
     font-size: 18px;
-    color: #777; /* Changed to gray */
-    margin-bottom: 10px; /* More spacing between ID and title */
+    color: #777; 
+    margin-bottom: 10px; 
 }
 
 .card-title {
-    font-size: 18px; /* Slightly larger */
-    color: #000; /* Black */
-    margin-bottom: 10px; /* Space between title and content */
+    font-size: 18px;
+    color: #000; 
+    margin-bottom: 10px;
     display: -webkit-box;
-    -webkit-line-clamp: 2; /* Limit title to 2 lines */
+    -webkit-line-clamp: 2; 
     -webkit-box-orient: vertical;
     overflow: hidden;
-    text-overflow: ellipsis; /* Truncate with ellipsis */
+    text-overflow: ellipsis; 
 }
 
 .card-svg {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    margin-right: 1px; /* Space between SVG and tags */
+    margin-right: 1px; 
 }
 
 .card-tags {
     display: flex;
     align-items: center;
-    flex-wrap: wrap; /* Tags will wrap if there's not enough space */
+    flex-wrap: wrap; 
 }
 
 .card-tag {
     display: flex;
     align-items: center;
-    margin-right: 1px; /* Space between tags */
+    margin-right: 1px; 
 }
 
 .tag-svg {
-    margin-right: 5px; /* Space between tag icon and text */
+    margin-right: 5px; 
 }
 
 .card-no-tag {
@@ -76,25 +76,25 @@
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    margin-right: 4px; /* Reduced space between initials and SVG */
+    margin-right: 4px; 
 }
 
 .availability-svg {
-    margin-left: 2px; /* Reduced space between initials and SVG */
+    margin-left: 2px; 
 }
 
-/* Responsive Design for Tablets and Mobile */
+
 
 @media (max-width: 1024px) {
     .card {
-        width: 40%; /* Adjust card width for tablets */
+        width: 40%;
     }
 }
 
 @media (max-width: 768px) {
     .card {
-        width: 90%; /* Full-width for mobile */
-        margin: 20px auto; /* Center the card on mobile */
+        width: 90%;
+        margin: 20px auto;
     }
 
     .card-user {
